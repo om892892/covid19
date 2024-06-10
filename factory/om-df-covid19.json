@@ -1,0 +1,9 @@
+{
+	"name": "om-df-covid19",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "16759c89-7a5a-435a-8663-27e386ebad38",
+		"tenantId": "682f8b68-6e58-4205-b389-84a320b14a77"
+	}
+}
