@@ -1,0 +1,25 @@
+{
+	"name": "event_trigger",
+	"properties": {
+		"description": "when file come  at storage account at that time this trigger get execute ",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_data_ingestion_in_raw",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/populations/blobs/population-by-age.tsv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/32ef494a-beee-4985-8cbd-4ffd21de1c70/resourceGroups/adf_bwt/providers/Microsoft.Storage/storageAccounts/blobstgcovid",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
