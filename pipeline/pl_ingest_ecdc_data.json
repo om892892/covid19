@@ -108,7 +108,7 @@
 				}
 			},
 			{
-				"name": "ForEach1",
+				"name": "Excute copy for every record",
 				"type": "ForEach",
 				"dependsOn": [
 					{
