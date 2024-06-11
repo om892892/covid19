@@ -60,6 +60,11 @@
 				]
 			}
 		],
+		"variables": {
+			"source": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
