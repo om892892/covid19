@@ -78,6 +78,9 @@
 			},
 			"sinkRelativeURL": {
 				"type": "string"
+			},
+			"sourcebaseURL": {
+				"type": "string"
 			}
 		},
 		"annotations": []
