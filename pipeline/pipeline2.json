@@ -74,7 +74,26 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"enableStaging": false
+								"sink": {
+									"type": "DelimitedTextSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "DelimitedTextWriteSettings",
+										"quoteAllText": true,
+										"fileExtension": ".txt"
+									}
+								},
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -83,6 +102,22 @@
 									"parameters": {
 										"relativeURL": {
 											"value": "@item().sourceRelativeURL",
+											"type": "Expression"
+										},
+										"baseURL": {
+											"value": "@item().sourceBaseURL",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_ecdc_raw_csv_dl",
+									"type": "DatasetReference",
+									"parameters": {
+										"filename": {
+											"value": "@{item().sinkFileName}",
 											"type": "Expression"
 										}
 									}
