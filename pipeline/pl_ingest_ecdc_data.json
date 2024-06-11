@@ -118,7 +118,13 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup ecdc file ').output.value",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"parameters": {
