@@ -137,17 +137,6 @@
 				}
 			}
 		],
-		"parameters": {
-			"sourceRelativeURL": {
-				"type": "string"
-			},
-			"sinkRelativeURL": {
-				"type": "string"
-			},
-			"sourcebaseURL": {
-				"type": "string"
-			}
-		},
 		"annotations": []
 	}
 }
