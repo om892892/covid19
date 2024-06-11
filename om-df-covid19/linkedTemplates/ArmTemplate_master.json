@@ -19,13 +19,13 @@
 			"type": "string",
 			"defaultValue": "https://gen2stgcovid19.dfs.core.windows.net/"
 		},
-		"event_trigger_properties_typeProperties_scope": {
-			"type": "string",
-			"defaultValue": "/subscriptions/32ef494a-beee-4985-8cbd-4ffd21de1c70/resourceGroups/adf_bwt/providers/Microsoft.Storage/storageAccounts/blobstgcovid"
-		},
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "@{linkedService().sourcebaseURL}"
+		},
+		"event_trigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/32ef494a-beee-4985-8cbd-4ffd21de1c70/resourceGroups/adf_bwt/providers/Microsoft.Storage/storageAccounts/blobstgcovid"
 		},
 		"containerUri": {
 			"type": "string",
