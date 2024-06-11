@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "pl_data_ingest_ecdc",
 	"properties": {
 		"activities": [
 			{
