@@ -22,8 +22,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
-				"     documentForm: 'documentPerLine',",
-				"     partitionBy('roundRobin', 2)) ~> source1"
+				"     documentForm: 'documentPerLine') ~> source1"
 			]
 		}
 	}
