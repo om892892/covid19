@@ -80,7 +80,7 @@
 							"typeProperties": {
 								"variableName": "sourceRelativeURL",
 								"value": {
-									"value": "@item().sourceRelativeURL",
+									"value": "@item().sinkFileName",
 									"type": "Expression"
 								}
 							}
