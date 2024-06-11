@@ -1,0 +1,24 @@
+{
+	"name": "schedule_trigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_data_ingestion_in_raw",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 15,
+				"startTime": "2024-06-11T05:52:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
