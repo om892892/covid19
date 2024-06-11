@@ -13,6 +13,9 @@
 		},
 		"la_adls_covidreportingdl_properties_typeProperties_url": {
 			"value": "https://gen2stgcovid19.dfs.core.windows.net/"
+		},
+		"event_trigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/32ef494a-beee-4985-8cbd-4ffd21de1c70/resourceGroups/adf_bwt/providers/Microsoft.Storage/storageAccounts/blobstgcovid"
 		}
 	}
 }
