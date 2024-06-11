@@ -36,8 +36,6 @@
 			{
 				"name": "excute copy for every record",
 				"type": "ForEach",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Lookup ecd  file ",
