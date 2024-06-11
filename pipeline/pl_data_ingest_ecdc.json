@@ -38,7 +38,7 @@
 				"type": "ForEach",
 				"dependsOn": [
 					{
-						"activity": "Lookup ecd  file ",
+						"activity": "Lookup ecd  file",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -47,7 +47,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup ecd  file ').output.output.value",
+						"value": "@activity('Lookup ecd  file').output.output.output.value",
 						"type": "Expression"
 					},
 					"activities": [
