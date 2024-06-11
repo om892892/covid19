@@ -62,7 +62,27 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "sourceRelativeURL",
-								"value": ""
+								"value": {
+									"value": "@item().sourceRelativeURL",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Set variable1_copy1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "sourceRelativeURL",
+								"value": {
+									"value": "@item().sourceRelativeURL",
+									"type": "Expression"
+								}
 							}
 						}
 					]
