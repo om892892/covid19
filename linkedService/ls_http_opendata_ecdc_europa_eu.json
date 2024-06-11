@@ -2,6 +2,11 @@
 	"name": "ls_http_opendata_ecdc_europa_eu",
 	"properties": {
 		"description": "take data from ecdc url copy data to the adls gen 2 \n",
+		"parameters": {
+			"sourcebaseURL": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
