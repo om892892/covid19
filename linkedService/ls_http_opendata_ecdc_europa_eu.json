@@ -10,7 +10,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": " https://raw.githubusercontent.com/",
+			"url": "@{linkedService().sourcebaseURL}",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
