@@ -61,7 +61,10 @@
 			}
 		],
 		"variables": {
-			"source": {
+			"sourceRelativeURL": {
+				"type": "String"
+			},
+			"sinkRelativeURL": {
 				"type": "String"
 			}
 		},
