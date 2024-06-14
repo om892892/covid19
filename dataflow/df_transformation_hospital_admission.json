@@ -120,7 +120,7 @@
 				"DimDataSource derive(ecdc_year_week = year + '-w' +lpad(week_of_year,2,'0')) ~> derivedECDCYearWeek",
 				"derivedECDCYearWeek aggregate(groupBy(ecdc_year_week),",
 				"     week_start_date = min(date),",
-				"          week_end_date = ERROR_FUNCTION('')) ~> aggDimDate"
+				"          week_end_date = max(date)) ~> aggDimDate"
 			]
 		}
 	}
