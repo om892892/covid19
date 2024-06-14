@@ -190,8 +190,8 @@
 				"          population,",
 				"          reported_year_week,",
 				"          source,",
-				"          {Daily hospital occupancy_count},",
-				"          {Daily ICU occupancy_count}",
+				"          hospital_occupancy_count = {Daily hospital occupancy_count},",
+				"          icu_occupancy_count = {Daily ICU occupancy_count}",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectDaily"
