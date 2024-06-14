@@ -147,7 +147,7 @@
 				"          population,",
 				"          reported_year_week,",
 				"          source),",
-				"     pivotBy(indicator),",
+				"     pivotBy(indicator, ['Daily hospital occupancy']),",
 				"     columnNaming: '$N$V',",
 				"     lateral: true) ~> pivotDaily"
 			]
