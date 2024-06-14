@@ -26,7 +26,11 @@
 					"name": "DimDataSource"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"name": "weeklySink"
+				}
+			],
 			"transformations": [
 				{
 					"name": "selectRequiredFields"
@@ -189,12 +193,16 @@
 				"          country_code_3_digit,",
 				"          population,",
 				"          reported_year_week,",
-				"          source,",
 				"          hospital_occupancy_count = {Daily hospital occupancy_count},",
-				"          icu_occupancy_count = {Daily ICU occupancy_count}",
+				"          icu_occupancy_count = {Daily ICU occupancy_count},",
+				"          source",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> selectDaily"
+				"     skipDuplicateMapOutputs: true) ~> selectDaily",
+				"selectWeekly sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> weeklySink"
 			]
 		}
 	}
