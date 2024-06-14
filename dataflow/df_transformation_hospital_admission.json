@@ -133,7 +133,8 @@
 				"          country_code_3_digit,",
 				"          population,",
 				"          reported_year_week,",
-				"          {} = ERROR_FUNCTION('')),",
+				"          source),",
+				"     pivotBy(indicator),",
 				"     columnNaming: '$N$V',",
 				"     lateral: true) ~> pivotWeekly"
 			]
