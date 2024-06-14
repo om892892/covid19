@@ -33,6 +33,9 @@
 						"type": "DatasetReference"
 					},
 					"name": "weeklySink"
+				},
+				{
+					"name": "DailySink"
 				}
 			],
 			"transformations": [
@@ -209,7 +212,11 @@
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> weeklySink"
+				"     skipDuplicateMapOutputs: true) ~> weeklySink",
+				"selectDaily sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> DailySink"
 			]
 		}
 	}
