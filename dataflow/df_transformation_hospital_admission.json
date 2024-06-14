@@ -31,7 +31,7 @@
 					"name": "selectRequiredFields2"
 				},
 				{
-					"name": "split1"
+					"name": "conditionalSplit1"
 				}
 			],
 			"scriptLines": [
@@ -86,7 +86,7 @@
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectRequiredFields2",
 				"selectRequiredFields2 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(, )"
+				"     disjoint: true) ~> conditionalSplit1@(weekly, daily)"
 			]
 		}
 	}
