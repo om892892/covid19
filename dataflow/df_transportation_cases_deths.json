@@ -15,7 +15,7 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "filter1"
+					"name": "EuropeData"
 				}
 			],
 			"scriptLines": [
@@ -33,7 +33,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> casesDethsSource",
-				"casesDethsSource filter(ERROR_FUNCTION('')) ~> filter1"
+				"casesDethsSource filter(ERROR_FUNCTION('')) ~> EuropeData"
 			]
 		}
 	}
