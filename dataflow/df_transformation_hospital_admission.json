@@ -67,7 +67,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectRequiredFields",
-				"selectRequiredFields, countryCode lookup(selectRequiredFields @country == countryCode@country,",
+				"selectRequiredFields, countryCode lookup(selectRequiredFields@country == countryCode@country,",
 				"     multiple: false,",
 				"     pickup: 'any',",
 				"     broadcast: 'auto')~> lookupCountry",
@@ -85,7 +85,7 @@
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectRequiredFields2",
-				"selectRequiredFields2 split(indicator == 'weekly new Hospital admission per 100k' || indicator == 'weekly new ICU admissions per 100k',",
+				"selectRequiredFields2 split(indicator == 'Weekly new hospital admissions per 100k' || indicator == 'Weekly new ICU admissions per 100k',",
 				"     disjoint: true) ~> conditionalSplit1@(weekly, daily)"
 			]
 		}
