@@ -134,8 +134,8 @@
 				"          population,",
 				"          reported_year_week,",
 				"          source),",
-				"     pivotBy(indicator),",
-				"     columnNaming: '$N$V',",
+				"     pivotBy(indicator, ['Weekly new hospital admissions per 100k', 'Weekly new ICU admissions per 100k']),",
+				"     columnNaming: '$V_$N',",
 				"     lateral: true) ~> pivotWeekly"
 			]
 		}
