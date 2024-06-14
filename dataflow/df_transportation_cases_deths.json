@@ -78,8 +78,8 @@
 				"          indicator,",
 				"          daily_count,",
 				"          source,",
-				"          each(match(name == 'date'),",
-				"               'reported' +'_date' = $$)",
+				"          each(match(name=='date'),",
+				"               'reported'+'_date' = $$)",
 				"     ),",
 				"     skipDuplicateMapInputs: false,",
 				"     skipDuplicateMapOutputs: false) ~> selectOnlyrequiedField",
@@ -107,6 +107,7 @@
 				"          reported_date,",
 				"          source",
 				"     ),",
+				"     partitionBy('hash', 1),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> selectFprSink",
 				"selectFprSink sink(allowSchemaDrift: true,",
@@ -115,7 +116,8 @@
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> casesAndDethsSink"
+				"     skipDuplicateMapOutputs: true,",
+				"     partitionBy('hash', 1)) ~> casesAndDethsSink"
 			]
 		}
 	}
