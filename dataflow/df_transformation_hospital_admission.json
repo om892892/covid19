@@ -42,6 +42,9 @@
 				},
 				{
 					"name": "aggDimDate"
+				},
+				{
+					"name": "joinWithDAte"
 				}
 			],
 			"scriptLines": [
@@ -116,7 +119,12 @@
 				"     disjoint: true) ~> conditionalSplit1@(weekly, daily)",
 				"DimDataSource aggregate(groupBy(ecdc_year_week = year + '-w' +lpad(week_of_year,2,'0')),",
 				"     week_start_date = min(date),",
-				"          week_end_date = max(date)) ~> aggDimDate"
+				"          week_end_date = max(date)) ~> aggDimDate",
+				"conditionalSplit1@weekly, aggDimDate join(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     joinType:'inner',",
+				"     matchType:'exact',",
+				"     ignoreSpaces: false,",
+				"     broadcast: 'auto')~> joinWithDAte"
 			]
 		}
 	}
