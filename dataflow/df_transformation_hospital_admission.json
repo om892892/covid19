@@ -17,6 +17,9 @@
 						"type": "DatasetReference"
 					},
 					"name": "countryCode"
+				},
+				{
+					"name": "source2"
 				}
 			],
 			"sinks": [],
@@ -57,6 +60,8 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> countryCode",
+				"source(allowSchemaDrift: true,",
+				"     validateSchema: false) ~> source2",
 				"source1 select(mapColumn(",
 				"          country,",
 				"          indicator,",
