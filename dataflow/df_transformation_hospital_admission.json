@@ -59,7 +59,7 @@
 					"name": "sortWeekly"
 				},
 				{
-					"name": "select1"
+					"name": "selectWeekly"
 				}
 			],
 			"scriptLines": [
@@ -179,7 +179,7 @@
 				"          {Weekly new ICU admissions per 100k_count}",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> select1"
+				"     skipDuplicateMapOutputs: true) ~> selectWeekly"
 			]
 		}
 	}
