@@ -18,7 +18,7 @@
 					"name": "filterEuropeData"
 				},
 				{
-					"name": "selectOnlyrequi"
+					"name": "selectOnlyrequiedField"
 				}
 			],
 			"scriptLines": [
@@ -50,7 +50,7 @@
 				"          source",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> selectOnlyrequi"
+				"     skipDuplicateMapOutputs: true) ~> selectOnlyrequiedField"
 			]
 		}
 	}
