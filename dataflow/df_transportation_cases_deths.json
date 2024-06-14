@@ -41,16 +41,14 @@
 				"filterEuropeData select(mapColumn(",
 				"          country,",
 				"          country_code,",
-				"          continent,",
 				"          population,",
 				"          indicator,",
 				"          daily_count,",
 				"          date,",
-				"          rate_14_day,",
 				"          source",
 				"     ),",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> selectOnlyrequiedField"
+				"     skipDuplicateMapInputs: false,",
+				"     skipDuplicateMapOutputs: false) ~> selectOnlyrequiedField"
 			]
 		}
 	}
