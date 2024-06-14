@@ -35,10 +35,9 @@
 				"          country,",
 				"          indicator,",
 				"          date,",
-				"          year_week,",
+				"          report_year_week = year_week,",
 				"          value,",
-				"          source,",
-				"          url",
+				"          source",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> select1"
