@@ -45,6 +45,9 @@
 				},
 				{
 					"name": "joinWithDAte"
+				},
+				{
+					"name": "pivotWeekly"
 				}
 			],
 			"scriptLines": [
@@ -124,7 +127,10 @@
 				"     joinType:'inner',",
 				"     matchType:'exact',",
 				"     ignoreSpaces: false,",
-				"     broadcast: 'auto')~> joinWithDAte"
+				"     broadcast: 'auto')~> joinWithDAte",
+				"joinWithDAte pivot(groupBy(country),",
+				"     columnNaming: '$N$V',",
+				"     lateral: true) ~> pivotWeekly"
 			]
 		}
 	}
