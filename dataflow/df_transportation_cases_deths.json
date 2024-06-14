@@ -33,7 +33,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> casesDethsSource",
-				"casesDethsSource filter(ERROR_FUNCTION('')) ~> EuropeData"
+				"casesDethsSource filter(continent == 'Europe' && not(isNull(country_code))) ~> EuropeData"
 			]
 		}
 	}
