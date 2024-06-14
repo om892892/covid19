@@ -15,7 +15,10 @@
 			"sinks": [],
 			"transformations": [
 				{
-					"name": "EuropeData"
+					"name": "filterEuropeData"
+				},
+				{
+					"name": "selectOnlyrequi"
 				}
 			],
 			"scriptLines": [
@@ -34,7 +37,20 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     maxColumns: 20000) ~> casesDethsSource",
-				"casesDethsSource filter(continent == 'Europe' && not(isNull(country_code))) ~> EuropeData"
+				"casesDethsSource filter(continent == 'Europe' && not(isNull(country_code))) ~> filterEuropeData",
+				"filterEuropeData select(mapColumn(",
+				"          country,",
+				"          country_code,",
+				"          continent,",
+				"          population,",
+				"          indicator,",
+				"          daily_count,",
+				"          date,",
+				"          rate_14_day,",
+				"          source",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> selectOnlyrequi"
 			]
 		}
 	}
