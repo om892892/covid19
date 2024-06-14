@@ -155,7 +155,7 @@
 				"     columnNaming: '$V_$N',",
 				"     lateral: true) ~> pivotDaily",
 				"pivotDaily sort(asc(reported_year_week, true),",
-				"     caseInsensitive: true) ~> sortWeekly"
+				"     asc(country, true)) ~> sortWeekly"
 			]
 		}
 	}
