@@ -154,7 +154,7 @@
 				"     count = sum(value),",
 				"     columnNaming: '$V_$N',",
 				"     lateral: true) ~> pivotDaily",
-				"pivotDaily sort(asc(ERROR_FUNCTION(''), true),",
+				"pivotDaily sort(asc(reported_year_week, true),",
 				"     caseInsensitive: true) ~> sortWeekly"
 			]
 		}
